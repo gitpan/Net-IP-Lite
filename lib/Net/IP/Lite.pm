@@ -15,7 +15,7 @@ our @EXPORT = qw(
 
 use constant IPV6IPV4HEAD => '0' x 80 . '1' x 16;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub _wrong_ip {
 	my $addr = shift;
