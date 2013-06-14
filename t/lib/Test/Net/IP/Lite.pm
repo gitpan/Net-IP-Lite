@@ -21,16 +21,13 @@ our @EXPORT = qw(
 	@ipv4_in_range @ipv4_not_in_range @ipv6_in_range @ipv6_not_in_range
 );
 
-use constant LOCALHOSTIPV4 => '01111111000000000000000000000001';
-
-use constant {
-	LOCALHOSTIPV6     => '0' x 127 . '1',
-	LOCALHOSTIPV6IPV4 => '0' x 80 . '1' x 16 . LOCALHOSTIPV4,
-	ZERONETIPV4       => '0' x 32,
-	ZERONETIPV6       => '0' x 128,
-	UNICASTIPV6       => '11111100' . '0' x 120,
-	FFFFFFFF0001      => '1' x 32 . '0' x 95 . '1'
-};
+use constant LOCALHOSTIPV4     => '01111111000000000000000000000001';
+use constant LOCALHOSTIPV6     => '0' x 127 . '1';
+use constant LOCALHOSTIPV6IPV4 => '0' x 80 . '1' x 16 . LOCALHOSTIPV4;
+use constant ZERONETIPV4       => '0' x 32;
+use constant ZERONETIPV6       => '0' x 128;
+use constant UNICASTIPV6       => '11111100' . '0' x 120;
+use constant FFFFFFFF0001      => '1' x 32 . '0' x 95 . '1';
 
 our @invalid_addr = (
 	[undef,  'undefined value' ],
